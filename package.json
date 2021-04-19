@@ -32,9 +32,19 @@
 					"source.haskell"
 				],
 				"scopeName": "inline.sql",
-				"path": "./syntaxes/sql.tmLanguage.json",
+				"path": "./syntaxes/hask-sql.tmLanguage.json",
 				"embeddedLanguages": {
 					"meta.embedded.block.sql": "sql"
+				}
+			},
+			{
+				"injectTo": [
+					"source.sql"
+				],
+				"scopeName": "inline.haskell",
+				"path": "./syntaxes/sql.tmLanguage.json",
+				"embeddedLanguages": {
+					"meta.embedded.haskell": "haskell"
 				}
 			}
 		]

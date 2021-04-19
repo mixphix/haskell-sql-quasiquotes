@@ -1,26 +1,9 @@
 {
-  "scopeName": "inline.sql",
-  "fileTypes": ["hs", "sql"],
-  "injectionSelector": "L:source.haskell -comment -(string -meta.embedded)",
+  "scopeName": "inline.haskell",
+  "fileTypes": ["sql"],
+  "injectionSelector": "L:source.sql -comment -(string -meta.embedded)",
   "patterns": [
-    {
-      "name": "meta.embedded.block.sql.embedded",
-      "contentName": "meta.embedded.block.sql",
-      "begin": "(?x)(\\[)(sql)(\\|)",
-      "beginCaptures": {
-        "1": { "name": "keyword.operator.quasi-quotation.begin.haskell" },
-        "2": { "name": "entity.name.quasi-quoter.haskell" },
-        "3": { "name": "keyword.operator.quasi-quotation.begin.haskell" }
-      },
-      "end": "(\\|\\])",
-      "endCaptures": {
-        "0": { "name": "keyword.operator.quasi-quotation.end.haskell" }
-      },
-      "patterns": [
-        { "include": "#interpolation" },
-        { "include": "source.sql" }
-      ]
-    }
+    { "include": "#interpolation" }
   ],
   "repository": {
     "interpolation": {
