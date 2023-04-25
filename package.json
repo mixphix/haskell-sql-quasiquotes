@@ -2,7 +2,7 @@
 	"name": "haskell-sql-quasiquotes",
 	"displayName": "Haskell SQL QuasiQuotes",
 	"description": "Syntax highlighting for SQL quasiquotes within Haskell files.",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"engines": {
 		"vscode": "^1.55.0"
 	},
@@ -22,7 +22,7 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/bi-functor/haskell-sql-quasiquotes.git"
+		"url": "https://github.com/mixphix/haskell-sql-quasiquotes.git"
 	},
 	"publisher": "mel-brown",
 	"contributes": {

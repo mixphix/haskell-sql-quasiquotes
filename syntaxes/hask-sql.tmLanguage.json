@@ -1,7 +1,7 @@
 {
   "scopeName": "inline.sql",
   "fileTypes": ["hs"],
-  "injectionSelector": "L:source.haskell -comment -(string -meta.embedded)",
+  "injectionSelector": "L:source.haskell -comment",
   "patterns": [
     {
       "name": "meta.embedded.block.sql.embedded",
