@@ -1,7 +1,7 @@
 {
   "scopeName": "inline.haskell",
   "fileTypes": ["sql"],
-  "injectionSelector": "L:source.sql -comment -(string -meta.embedded)",
+  "injectionSelector": "L:source.sql",
   "patterns": [
     { "include": "#interpolation" }
   ],
@@ -9,7 +9,7 @@
     "interpolation": {
       "patterns": [
         {
-          "begin": "([%#^\\+]|@\\?)\\{",
+          "begin": "[%#^\\+]\\{",
           "beginCaptures": {
             "0": {
               "name": "punctuation.section.interpolation.begin.sql"

@@ -6,11 +6,12 @@
     {
       "name": "meta.embedded.block.sql.embedded",
       "contentName": "meta.embedded.block.sql",
-      "begin": "(?x)(\\[)(sql)(\\|)",
+      "begin": "(?x)(\\[)((\\w+\\.)*sql)(\\|)",
       "beginCaptures": {
         "1": { "name": "keyword.operator.quasi-quotation.begin.haskell" },
         "2": { "name": "entity.name.quasi-quoter.haskell" },
-        "3": { "name": "keyword.operator.quasi-quotation.begin.haskell" }
+        "3": { "name": "entity.name.namespace.haskell" },
+        "4": { "name": "keyword.operator.quasi-quotation.begin.haskell" }
       },
       "end": "(\\|\\])",
       "endCaptures": {
