@@ -1,6 +1,8 @@
 {
   "scopeName": "inline.sql",
-  "fileTypes": ["hs"],
+  "fileTypes": [
+    "hs"
+  ],
   "injectionSelector": "L:source.haskell -comment",
   "patterns": [
     {
@@ -8,18 +10,32 @@
       "contentName": "meta.embedded.block.sql",
       "begin": "(?x)(\\[)((\\w+\\.)*sql)(\\|)",
       "beginCaptures": {
-        "1": { "name": "keyword.operator.quasi-quotation.begin.haskell" },
-        "2": { "name": "entity.name.quasi-quoter.haskell" },
-        "3": { "name": "entity.name.namespace.haskell" },
-        "4": { "name": "keyword.operator.quasi-quotation.begin.haskell" }
+        "1": {
+          "name": "keyword.operator.quasi-quotation.begin.haskell"
+        },
+        "2": {
+          "name": "entity.name.quasi-quoter.haskell"
+        },
+        "3": {
+          "name": "entity.name.namespace.haskell"
+        },
+        "4": {
+          "name": "keyword.operator.quasi-quotation.begin.haskell"
+        }
       },
       "end": "(\\|\\])",
       "endCaptures": {
-        "0": { "name": "keyword.operator.quasi-quotation.end.haskell" }
+        "0": {
+          "name": "keyword.operator.quasi-quotation.end.haskell"
+        }
       },
       "patterns": [
-        { "include": "#interpolation" },
-        { "include": "source.sql" }
+        {
+          "include": "#interpolation"
+        },
+        {
+          "include": "source.sql"
+        }
       ]
     }
   ],
@@ -42,7 +58,29 @@
           },
           "name": "meta.interpolation.sql",
           "patterns": [
-            { "include": "source.haskell" }
+            {
+              "include": "source.haskell"
+            }
+          ]
+        },
+        {
+          "begin": "'",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.begin.sql"
+            }
+          },
+          "end": "'",
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.end.sql"
+            }
+          },
+          "name": "string.quoted.single.sql",
+          "patterns": [
+            {
+              "include": "#interpolation"
+            }
           ]
         }
       ]

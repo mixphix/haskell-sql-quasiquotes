@@ -26,6 +26,26 @@
           "patterns": [
             { "include": "source.haskell" }
           ]
+        },
+        {
+          "begin": "'",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.begin.sql"
+            }
+          },
+          "end": "'",
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.end.sql"
+            }
+          },
+          "name": "string.quoted.single.sql",
+          "patterns": [
+            {
+              "include": "#interpolation"
+            }
+          ]
         }
       ]
     }
